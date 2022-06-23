@@ -27,3 +27,15 @@ The optimization algorithm is stochastic gradient descent.
 
 ### Training
 We used 3 epochs to train the model.
+
+## Bank Loan Approvals
+
+### Architecture
+We used a 12 layer network with 2 dense layers with 250 neurons, 3 dense layers with 500 neurons, the input and output layers and 5 dropout layers to avoid overfitting.
+
+## Parameters
+The optimization algorithm is a version of stochastic gradient descent commonly knwon as Adam.
+The loss function used for error is MSE.
+
+## Training
+We used 20 epochs to train the model with 0.2 validation loss.
