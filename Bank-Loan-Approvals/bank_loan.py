@@ -13,9 +13,7 @@ from sklearn import metrics
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-import matplotlib.pyplot as plt
-from jupyterthemes import jtplot
-jtplot.style(theme = 'monokai', context = 'notebook', ticks = True, grid = False) 
+import matplotlib.pyplot as plt 
 
 # Load dataset
 bank_df = pd.read_csv('UniversalBank.csv')
