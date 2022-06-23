@@ -66,7 +66,7 @@ ANN_model.add(Dense(2, activation = 'softmax'))
 ANN_model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
 # Train the model
-history = ANN_model.fit(X_train, y_train, epochs = 5, validation_split = 0.2, verbose = 1)
+history = ANN_model.fit(X_train, y_train, epochs = 20, validation_split = 0.2, verbose = 1)
 
 # Evaluating model performance
 # Make predictions
