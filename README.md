@@ -1,7 +1,7 @@
 # Neural-network-projects
 
 This is the notes I gathered code from a series of guided project from Coursera. 
-It taught the basic tools, libraries and concepts needed to solve real life problems with the Keras framework, having Tensorflow as its backend.
+It taught the basic tools, libraries and concepts needed to solve real life problems with Neural Networks using the Keras framework, having Tensorflow as its backend.
 
 ## House price prediction
 We used regression to solve for the price of a house in terms of parameters such as distance to city, year, etc.
