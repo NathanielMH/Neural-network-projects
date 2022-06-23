@@ -1,6 +1,6 @@
 # Neural-network-projects
 
-This is the notes I gathered code from a series of guided project from Coursera. 
+These are the notes and code I gathered from a series of guided project from Coursera. 
 It taught the basic tools, libraries and concepts needed to solve real life problems with Neural Networks using the Keras framework, having Tensorflow as its backend.
 
 ## House price prediction
