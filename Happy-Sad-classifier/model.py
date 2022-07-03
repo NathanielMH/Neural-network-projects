@@ -4,6 +4,7 @@ import numpy as np
 import os
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras import optimizers, losses
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 base_dir = "./data/"
 happy_dir = os.path.join(base_dir, "happy/")
@@ -15,11 +16,9 @@ class myCallback(tf.keras.callbacks.Callback):
             print("\nReached 99.9% accuracy so cancelling training!")
             self.model.stop_training = True
 
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 def image_generator():
     # Instantiate the ImageDataGenerator class.
-    # Remember to set the rescale argument.
     train_datagen = ImageDataGenerator(rescale=1/255)
     train_generator = train_datagen.flow_from_directory(directory='./data/',
                                                         target_size=(150, 150),
