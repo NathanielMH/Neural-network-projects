@@ -53,3 +53,27 @@ The loss function is MSE (Mean squared error).
 
 ### Training 
 We used 50 epochs to train the model that is included in the .json file.
+
+## Happy sad classifier
+Used data downloaded from zip to train the model, that receives images of emoji like happy or sad faces and classifies them.
+
+### Architecture
+3 Conv2D and MaxPooling2D layers followed by a Dense 512 layer with reLU activation, plus the output layer with sigmoid activation.
+
+### Parameters
+The optimization algorithm is RMSProp, the loss function is binary crossentropy.
+
+### Training
+We trained the model for a maximum of 20 epochs, however with the custom callback that we created the model stops training after achieving 0.999 accuracy on training data to avoid overfitting.
+
+## Sign language detector
+The model receives black and white images of signs corresponding to characters in the sign language and classifies them according to the character they represent.
+
+### Architecture
+2 Conv2D and MaxPooling2D layers, a flatten layer, a Dense layer with 1024 neurons and reLU activation, a Dense 512 layer with reLU activation and an output layer with 26 neurons corresponding to the 26 characters in sign language, with softmax activation.
+
+### Parameters
+The optimization algorithm is RMSProp and the loss function is sparse categorical cross entropy.
+
+### Training
+We trained the model for 15 epochs, reaching 99% training accuracy and 95% validation accuracy.
