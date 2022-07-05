@@ -67,7 +67,7 @@ The optimization algorithm is RMSProp, the loss function is binary crossentropy.
 We trained the model for a maximum of 20 epochs, however with the custom callback that we created the model stops training after achieving 0.999 accuracy on training data to avoid overfitting.
 
 ## Sign language detector
-The model receives black and white images of signs corresponding to characters in the sign language and classifies them according to the character they represent.
+The model receives black and white images of signs corresponding to characters in the sign language and classifies them according to the character they represent. 
 
 ### Architecture
 2 Conv2D and MaxPooling2D layers, a flatten layer, a Dense layer with 1024 neurons and reLU activation, a Dense 512 layer with reLU activation and an output layer with 26 neurons corresponding to the 26 characters in sign language, with softmax activation.
@@ -82,10 +82,22 @@ We trained the model for 15 epochs, reaching 99% training accuracy and 95% valid
 The model receives text (tweets in particular) and predicts whether they are positive or negative in sentiment.
 
 ### Architecture
-We apply transfer learning and load embedding layers from a pretrained dataset. After, we add a dropout layer to avoid overfitting and add adaptability to the new dataset. We then have a Conv1D layer with relu activation, a bidirectional LSTSM layer with 16 dimensions, and two dense layers with activation functions relu and sigmoid respectively, with 512 neurons and 1 neuron for the output.
+We apply transfer learning and load embedding layers from a pretrained dataset. After, we add a dropout layer to avoid overfitting and add adaptability to the new dataset. We then have a Conv1D layer with relu activation, a bidirectional LSTM layer with 16 dimensions, and two dense layers with activation functions relu and sigmoid respectively, with 512 neurons and 1 neuron for the output.
 
 ### Parameters
 The optimization algorithm is rmsprop and the loss function is binary crossentropy as they have proved to perform well on binary classification problems.
 
 ### Training
 The model was trained for 20 epochs.
+
+## Poetry generator
+Given a corpus of words, the model generates a continuation based on previous sentences.
+
+### Architecture
+Embedding layer with embedding dimension/ output dimension of 100, Bidirectional LSTM layer with 150 dimensions and an output layer of shape the amount of words present in the corpus, with softmax activation.
+
+### Parameters
+The optimization algorithm is adam, a variant of stochastic gradient descent and the loss function is categorical cross_entropy.
+
+### Training
+The model was trained for 50 epochs.
