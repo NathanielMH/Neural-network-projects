@@ -77,3 +77,15 @@ The optimization algorithm is RMSProp and the loss function is sparse categorica
 
 ### Training
 We trained the model for 15 epochs, reaching 99% training accuracy and 95% validation accuracy.
+
+## Sentiment text classifier
+The model receives text (tweets in particular) and predicts whether they are positive or negative in sentiment.
+
+### Architecture
+We apply transfer learning and load embedding layers from a pretrained dataset. After, we add a dropout layer to avoid overfitting and add adaptability to the new dataset. We then have a Conv1D layer with relu activation, a bidirectional LSTSM layer with 16 dimensions, and two dense layers with activation functions relu and sigmoid respectively, with 512 neurons and 1 neuron for the output.
+
+### Parameters
+The optimization algorithm is rmsprop and the loss function is binary crossentropy as they have proved to perform well on binary classification problems.
+
+### Training
+The model was trained for 20 epochs.
